@@ -1,3 +1,4 @@
+*,
 *::before,
 *::after {
   box-sizing: border-box;
@@ -11,8 +12,8 @@ html {
   display: flex;
   justify-content: center;
   align-items: center;
-  inline-size: 1200px;
-  block-size: 100%;
+  width: 1200px;
+  height: 800px;
   margin: auto;
   color: #fff;
   font-family: "Fira Sans Condensed", sans-serif;
@@ -51,11 +52,10 @@ ol {
 .content {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
   align-items: flex-end;
   width: 1140px;
   gap: 30px;
-  margin-top: 105px;
+  justify-content: flex-start;
 }
 
 .search-form {
@@ -68,6 +68,7 @@ ol {
 }
 
 .search-form__fieldset-title {
+  font-weight: 400;
   font-size: 18px;
   padding-bottom: 5px;
 }
@@ -83,14 +84,12 @@ ol {
 
 .search-form__label {
   display: flex;
-  align-items: center;
-  width: fit-content;
-  gap: 5px; /* Отступ между чекбоксом и подписью */
+  gap: 5px;
 }
 
 .search-form__textfield {
-  min-width: 220px;
-  min-height: 24px;
+  min-width: 225px;
+  min-height: 27px;
   border: none;
   border-top: 1px solid #fff;
   border-bottom: 1px solid #fff;
@@ -112,8 +111,8 @@ ol {
 }
 
 .search-form__pseudo-checkbox {
-  height: 15px;
-  width: 15px;
+  height: 19px;
+  width: 19px;
   border: 1px solid #fff;
   padding: 1px;
 }
@@ -146,6 +145,7 @@ ol {
   font-size: 75px;
   line-height: 94%;
   text-transform: uppercase;
+  padding-top: 20px;
 }
 
 .content__accent {
@@ -166,7 +166,6 @@ ol {
   width: 100%; /* Ширина контейнера */
   height: 386px;
   overflow: hidden;
-  margin-bottom: 15px;
 }
 
 .result__video {
@@ -178,7 +177,8 @@ ol {
 
 .content__list {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
   gap: 30px;
   margin-top: 26px;
   margin-left: 2px;
@@ -189,17 +189,12 @@ ol {
   align-items: flex-start;
 }
 
-.content__card-link {
-  text-decoration: none;
-  color: #fff;
-}
-
 .content__card-link_current {
-  color: rgba(255, 255, 255, 0.7);
+  background-color: #545050;
 }
 
 .content__card-link:active {
-  background-color: rgba(255, 255, 255, 0.7); /* Цвет активной карточки */
+  background-color: #545050;
 }
 
 .content__card-link:hover {
@@ -251,10 +246,10 @@ ol {
 }
 
 .content__video-card-description-container {
-  width: 196px;
   flex-grow: 1;
   flex-basis: 0;
   overflow: hidden;
+  max-width: 196px;
 }
 
 .button {
@@ -282,7 +277,7 @@ ol {
 }
 
 .button:active {
-  background-color: rgba(255, 255, 255, 0.7); /* Цвет активной кнопки */
+  background-color: #545050;
 }
 
 .button:focus {
@@ -301,16 +296,4 @@ ol {
   background-color: transparent;
   cursor: pointer;
   margin-top: 20px;
-}
-
-.more-button:active {
-  background-color: rgba(255, 255, 255, 0.7); /* Цвет активной кнопки */
-}
-
-.more-button:focus {
-  outline: none; /* Сброс стандартной обводки */
-}
-
-.more-button:focus-visible {
-  outline: 2px dashed #fff; /* Обводка при фокусе */
 }
